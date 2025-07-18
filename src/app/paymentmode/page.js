@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import { useSearchParams, useRouter } from 'next/navigation';
 import { CheckCircle, IndianRupee, Wallet } from 'lucide-react';
@@ -39,7 +40,7 @@ export default function PaymentMode() {
             toast.error("Missing item ID.");
             setMissingItemId(true);
         }
-        
+
 
     }, [authorized, searchParams]);
 
