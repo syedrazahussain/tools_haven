@@ -723,9 +723,9 @@
 
 /* ======== MEDIA QUERIES ======== */
 @media screen and (max-width: 768px) {
-    html{
+    /* html{
         width: 100%;
-    }
+    } */
     .left_container {
         flex-direction: column;
         align-items: center;
