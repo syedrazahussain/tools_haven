@@ -60,7 +60,6 @@ export default function QRPayment() {
                 pickupFee: pickupFee || "0",
                 platformFee: platformFee || "0",
                 total: total || "0",
-                
                 title: title || "",
                 location: location || "",
                 image: image || "",
@@ -87,7 +86,7 @@ export default function QRPayment() {
                     <div className={styles.step1_side_line}></div>
                     <div className={styles.step} id={styles.step1}>
                         <i className={styles.icon}><BsCalendarDate /></i>
-                        <h1 className={styles.heading}>Date & Delivery</h1>
+                        <h1 className={styles.heading}>Date &amp; Delivery</h1>
                     </div>
                     <div className={styles.step2_side_Line}></div>
                     <div className={styles.step} id={styles.step2}>
@@ -115,7 +114,11 @@ export default function QRPayment() {
                 <div className={styles.two_div}>
                     <div className={styles.scanner_cards}>
                         <h1>Scan to Pay</h1>
-                        <img src={qr} alt="QR Code" className={styles.qrImage} />
+                        {qr ? (
+                            <img src={qr} alt="QR Code" className={styles.qrImage} />
+                        ) : (
+                            <p>QR code not found.</p>
+                        )}
                         <p>Time remaining: {Math.floor(timer / 60)}:{String(timer % 60).padStart(2, "0")}</p>
 
                         <button className={styles.doneBtn} onClick={handlePaymentDone} disabled={loading}>
@@ -126,7 +129,7 @@ export default function QRPayment() {
                     <div className={styles.note}>
                         <p>
                             Thank you for initiating the payment. Please read the following carefully: <br /><br />
-                            ✅ After clicking "I have paid", the system will now attempt to verify your payment. <br />
+                            ✅ After clicking &quot;I have paid&quot;, the system will attempt to verify your payment. <br />
                             📸 A payment confirmation screen or receipt will be requested next. <br /><br />
                             You may need to upload a screenshot of your payment. <br />
                             This helps us verify your transaction manually or through our system. <br /><br />

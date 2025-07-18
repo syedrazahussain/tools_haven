@@ -29,11 +29,7 @@ export default function User_login() {
 
         const isVerified = await res.json();
         if (res.ok && isVerified === true) {
-          if (role === 'toolsmaster') {
-            router.replace('/toolsmaster_dashboard');
-          } else {
-            router.replace('/');
-          }
+          router.replace(role === 'toolsmaster' ? '/toolsmaster_dashboard' : '/');
         }
       } catch (error) {
         console.error('Token verification failed', error);
@@ -44,7 +40,8 @@ export default function User_login() {
   }, [router]);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -64,11 +61,7 @@ export default function User_login() {
         localStorage.setItem('role', data.role);
         toast.success('Login successful!');
 
-        if (data.role === 'renter') {
-          router.push('/');
-        } else if (data.role === 'toolsmaster') {
-          router.push('/toolsmaster_dashboard');
-        }
+        router.push(data.role === 'toolsmaster' ? '/toolsmaster_dashboard' : '/');
       } else {
         toast.error(data.error || 'Invalid email or password');
       }
@@ -91,8 +84,9 @@ export default function User_login() {
           </div>
 
           <div className={styles.input_field}>
-            <label>Email:</label>
+            <label htmlFor="email">Email:</label>
             <input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
@@ -102,8 +96,9 @@ export default function User_login() {
           </div>
 
           <div className={styles.input_field}>
-            <label>Password:</label>
+            <label htmlFor="password">Password:</label>
             <input
+              id="password"
               type="password"
               name="password"
               value={formData.password}
@@ -113,8 +108,8 @@ export default function User_login() {
           </div>
 
           <div className={styles.input_field}>
-            <label>Login As:</label>
-            <select name="role" value={formData.role} onChange={handleChange}>
+            <label htmlFor="role">Login As:</label>
+            <select id="role" name="role" value={formData.role} onChange={handleChange}>
               <option value="renter">Renter</option>
               <option value="toolsmaster">Tools Master</option>
             </select>
@@ -122,7 +117,7 @@ export default function User_login() {
 
           <div className={styles.have_account}>
             <h1>
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <Link className={styles.user_login_color} href="/user_register">
                 Register
               </Link>
@@ -131,7 +126,7 @@ export default function User_login() {
 
           <div className={styles.register_btn}>
             <button type="submit" disabled={loading}>
-              {loading ? <FaSpinner className="animate-spin" /> : 'Login'}
+              {loading ? <FaSpinner className={styles.spinner} /> : 'Login'}
             </button>
           </div>
         </form>

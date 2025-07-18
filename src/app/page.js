@@ -1,24 +1,22 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Header from "../../components/Header/page";
-import styles from './home.module.css';
+import styles from "./home.module.css";
 import Image from "next/image";
-import herosection from '../../public/herosection.webp';
+import herosection from "../../public/herosection.webp";
 import { IoSearch } from "react-icons/io5";
 import { FaHammer } from "react-icons/fa6";
 import { PiScrewdriverBold } from "react-icons/pi";
 import { GiDrill, GiBoltCutter, GiSpanner, GiHandSaw } from "react-icons/gi";
 import Link from "next/link";
 import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { ClipLoader } from "react-spinners";
 import { registerPush } from "./utils/subscribe";
 
-
-
-const normalize = (str) => str.trim().toLowerCase().replace(/\s+/g, '');
+const normalize = (str) => str.trim().toLowerCase().replace(/\s+/g, "");
 
 const iconMap = {
   hammer: <FaHammer />,
@@ -29,7 +27,7 @@ const iconMap = {
   handsaw: <GiHandSaw />,
 };
 
-const allPossibleCategories = ['Hammer', 'Screwdriver', 'Drilling', 'Spanner', 'Handsaw'];
+const allPossibleCategories = ["Hammer", "Screwdriver", "Drilling", "Spanner", "Handsaw"];
 
 const checkAuth = async () => {
   const token = localStorage.getItem("token");
@@ -55,9 +53,9 @@ const getPaginationPages = (current, total) => {
   if (total <= 5) {
     for (let i = 1; i <= total; i++) pages.push(i);
   } else {
-    if (current <= 3) pages.push(1, 2, 3, 4, '...', total);
-    else if (current >= total - 2) pages.push(1, '...', total - 3, total - 2, total - 1, total);
-    else pages.push(1, '...', current - 1, current, current + 1, '...', total);
+    if (current <= 3) pages.push(1, 2, 3, 4, "...", total);
+    else if (current >= total - 2) pages.push(1, "...", total - 3, total - 2, total - 1, total);
+    else pages.push(1, "...", current - 1, current, current + 1, "...", total);
   }
   return pages;
 };
@@ -66,19 +64,16 @@ export default function Home() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [toolsdata, setToolsData] = useState([]);
-  const [name, setName] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [name, setName] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
   const itemsPerPage = 8;
 
-  const categories = Array.from(
-    new Set([
-      ...toolsdata.map(tool => tool.category),
-      ...allPossibleCategories
-    ])
-  ).sort((a, b) => a.localeCompare(b));
+  const categories = Array.from(new Set([...toolsdata.map(tool => tool.category), ...allPossibleCategories]))
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b));
 
   useEffect(() => {
     const protectRoute = async () => {
@@ -94,19 +89,15 @@ export default function Home() {
       }
     };
     protectRoute();
-
     registerPush();
-
-   
-
   }, [router]);
 
   const getName = async () => {
     try {
-      const response = await fetch('http://localhost:5000/dashboard/', {
+      const response = await fetch("http://localhost:5000/dashboard/", {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       });
       const data = await response.json();
       setName(data.username);
@@ -118,7 +109,7 @@ export default function Home() {
 
   const fetchTools = async () => {
     try {
-      const response = await fetch('http://localhost:5000/user/fetchitem');
+      const response = await fetch("http://localhost:5000/user/fetchitem");
       const data = await response.json();
       setToolsData(data);
     } catch (error) {
@@ -127,9 +118,10 @@ export default function Home() {
     }
   };
 
-  const filteredTools = toolsdata.filter(tool =>
-    tool.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-    (selectedCategory === '' || tool.category === selectedCategory)
+  const filteredTools = toolsdata.filter(
+    tool =>
+      tool.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      (selectedCategory === "" || tool.category === selectedCategory)
   );
 
   const totalPages = Math.ceil(filteredTools.length / itemsPerPage);
@@ -139,7 +131,7 @@ export default function Home() {
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -155,7 +147,6 @@ export default function Home() {
   return (
     <div>
       <main>
-        
         <Header />
         <ToastContainer position="top-center" autoClose={3000} />
         <div className={styles.main_container}>
@@ -174,8 +165,8 @@ export default function Home() {
             <div className={`${styles.navigationbar_div} ${menuOpen ? styles.show : ''}`}>
               <div className={styles.nav_left_content}>
                 <div className={styles.nav_item}><h1>My Account</h1></div>
-                <Link href={'/my_order'}><div className={styles.nav_item}><h1>My Orders</h1></div></Link>
-                <Link href={'/toolsmaster_dashboard'}><div className={styles.nav_item}><h1>Become ToolsMaster</h1></div></Link>
+                <Link href="/my_order"><div className={styles.nav_item}><h1>My Orders</h1></div></Link>
+                <Link href="/toolsmaster_dashboard"><div className={styles.nav_item}><h1>Become ToolsMaster</h1></div></Link>
               </div>
               <div className={styles.nav_right1_content}>
                 <div className={styles.user_name}><h1>Hello, {name}</h1></div>
@@ -185,8 +176,8 @@ export default function Home() {
 
           {/* Hero Section */}
           <div className={styles.hero_section}>
-            <Image src={herosection} alt="hero_image" width={1600} height={500} />
-            <div className={styles.hero_title}><h1>"Discover Tools Haven - Rent smarter and work faster"</h1></div>
+            <Image src={herosection} alt="hero image" width={1600} height={500} />
+            <div className={styles.hero_title}><h1>&quot;Discover Tools Haven - Rent smarter and work faster&quot;</h1></div>
           </div>
 
           {/* Search Bar */}
@@ -205,13 +196,13 @@ export default function Home() {
           {/* Category Filters */}
           <div className={styles.categories_div}>
             {categories.map((category, index) => {
-              const icon = iconMap[normalize(category)] || '🧰';
+              const icon = iconMap[normalize(category)] || "🧰";
               return (
                 <div
                   key={index}
                   className={styles.box1}
                   onClick={() => setSelectedCategory(category)}
-                  style={{ backgroundColor: selectedCategory === category ? '#eee' : '', cursor: 'pointer' }}
+                  style={{ backgroundColor: selectedCategory === category ? "#eee" : "", cursor: "pointer" }}
                 >
                   <div className={styles.item_logo}>{icon}</div>
                   <div className={styles.item_name}><h1>{category}</h1></div>
@@ -221,10 +212,8 @@ export default function Home() {
           </div>
 
           {selectedCategory && (
-            <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-              <button className={styles.clearCategoryBtn} onClick={() => setSelectedCategory('')}>
-                Clear Category Filter
-              </button>
+            <div style={{ textAlign: "center", marginTop: "1rem" }}>
+              <button className={styles.clearCategoryBtn} onClick={() => setSelectedCategory("")}>Clear Category Filter</button>
             </div>
           )}
 
@@ -241,7 +230,7 @@ export default function Home() {
                       <div className={styles.item_image}>
                         <Image
                           src={`http://localhost:5000/uploads/${tool.image1}`}
-                          alt="item_image"
+                          alt="item image"
                           width={250}
                           height={150}
                         />
@@ -271,13 +260,13 @@ export default function Home() {
                   </button>
 
                   {getPaginationPages(currentPage, totalPages).map((page, idx) =>
-                    page === '...' ? (
+                    page === "..." ? (
                       <span key={idx} className={styles.ellipsis}>...</span>
                     ) : (
                       <button
                         key={page}
                         onClick={() => handlePageChange(page)}
-                        className={`${styles.page_button} ${currentPage === page ? styles.active : ''}`}
+                        className={`${styles.page_button} ${currentPage === page ? styles.active : ""}`}
                       >
                         {page}
                       </button>
