@@ -1,0 +1,529 @@
+.order_details_main_container {
+    margin-top: 40px;
+    background-color: rgb(255, 255, 224);
+}
+
+.order_container {
+    padding: 20px;
+
+}
+
+.booking_id {
+    margin: 10px;
+}
+
+.first_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 100px 0px 10px;
+}
+
+.Id_and_image {
+
+    width: 50%;
+}
+
+.image_and_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+
+}
+
+.item_title {
+    display: flex;
+    justify-content: flex-start;
+
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 90px;
+
+
+}
+
+.current_and_title {
+
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.current_stage_heading h1 {
+    margin-top: -30px;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: green;
+}
+
+
+
+
+
+.image img {
+    height: 250px;
+    width: 250px;
+    border: 2px solid;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.cancel_btn{
+    display: flex;
+    align-items: center;
+    border: 2px solid red;
+    width: 200px;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+
+
+}
+
+.cancel_container {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.cancel_btn h1 {
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+.tracking_div {
+    margin-top: 30px;
+    padding: 30px 50px;
+
+}
+
+.line_div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.progress_line {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 87%;
+    height: 4px;
+    background-color: #d3d3d3;
+    z-index: 1;
+}
+
+.stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 25%;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 2px solid #999;
+}
+
+.circle.active {
+    background-color: #0f9d58;
+    border-color: #0f9d58;
+}
+
+.label {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.icon {
+    font-size: 24px;
+    color: #ccc;
+    z-index: 2;
+}
+
+.icon.active {
+    color: #0f9d58;
+    /* green for active stages */
+}
+
+.accepted {
+    font-size: 24px;
+    color: #0f9d58;
+    /* green */
+    margin-bottom: 8px;
+}
+
+.rejected {
+    font-size: 24px;
+    color: #d93025;
+    /* red */
+    margin-top: 8px;
+}
+
+.price_and_cancel_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.pending {
+    color: yellow;
+}
+
+.payment_heading {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.subtotal,
+.platform,
+.total {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #dadada;
+    padding: 10px;
+}
+
+.subtotal h2,
+.platform h2,
+.summary_name h1 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.total h1 {
+    font-weight: bold;
+    color: green;
+    font-size: 25px;
+
+}
+
+.payment_details_div {
+    margin-top: 50px;
+}
+
+.delivery_type_heading h1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+}
+
+.platform {
+    border-bottom: 2px solid #dadada;
+}
+
+.booking_heading h1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.date {
+    display: flex;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    padding: 10px;
+    justify-content: space-between
+}
+
+.date h2 {
+    font-weight: bold;
+}
+
+/* Animate active icons */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icon.active {
+    color: #0f9d58;
+    animation: pop 0.5s ease-in-out;
+}
+
+/* Slight hover effect if you want */
+.icon.active:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Progress bar base line */
+.progress_track {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    right: 5%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Progress bar fill */
+.progress_fill {
+    height: 100%;
+    background-color: #0f9d58;
+    transition: width 0.5s ease-in-out;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+/* Stage container */
+.stages {
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    width: 100%;
+}
+
+.stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    position: relative;
+}
+
+/* Animate active icons */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icon.active {
+    color: #0f9d58;
+    animation: pop 0.4s ease-in-out;
+}
+
+.icon {
+    font-size: 28px;
+    color: #bbb;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 3;
+}
+
+.label {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.progress_fill_pending {
+    background-color: yellow;
+}
+
+.progress_fill_rejected {
+    background-color: red;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress_fill_success {
+    background-color: green;
+}
+
+.spinner_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+}
+.button_loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #888;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.7s linear infinite;
+  margin-right: 10px;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.dialog_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.dialog_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.dialog_content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+}
+.dialog_actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+.dialog_cancel_btn,
+.dialog_confirm_btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.dialog_cancel_btn {
+  background: #ccc;
+}
+.dialog_confirm_btn {
+  background: #e74c3c;
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  .first_container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .Id_and_image, .price_and_cancel_div {
+    width: 100%;
+  }
+
+  .image_and_title {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item_title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .cancel_btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .price {
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 24px;
+  }
+
+  .tracking_div {
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+
+  .line_div,
+  .stages {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .stage {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .label {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .payment_heading,
+  .booking_heading h1,
+  .delivery_type_heading h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .subtotal,
+  .platform,
+  .total {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .total h1{
+    font-size: 18px;
+  }
+
+  .date {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dialog_content {
+    width: 90%;
+  }
+  .current_and_title{
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,138 @@
+.main_login_container {
+  background-color: palegoldenrod;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-image: url('../../../public/login2.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../../../public/login2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+}
+
+.form_container {
+  border: 2px solid #dadada;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input_field input,
+.input_field select {
+  border: 2px solid #dadada;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.input_field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.register_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.register_btn button {
+  width: 100%;
+  background-color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out all 0.5s;
+}
+
+.register_btn button:hover {
+  background-color: rgb(231, 72, 72);
+  letter-spacing: 2px;
+}
+
+.user_login_color {
+  color: blue;
+}
+
+.have_account {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .form_container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .register_btn button {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form_container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .input_field input,
+  .input_field select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .register_btn button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .have_account {
+    font-size: 0.85rem;
+  }
+}

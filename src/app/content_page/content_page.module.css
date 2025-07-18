@@ -1,0 +1,1047 @@
+.main_content_container {
+    margin-top: 50px;
+
+}
+
+.left_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.date_and_pay_btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.left_inner_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-left: -200px;
+
+
+}
+
+.item_image img {
+    margin-left: -50px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 19px rgba(0, 0, 0, 0.5);
+}
+
+.item_name {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.rent_btn button {
+    background-color: red;
+    padding: 10px;
+
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.rent_btn1 button,
+.rent_btn1 select {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.images_parts {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.sides {
+
+    margin-right: 10px;
+
+}
+
+.sides img {
+    border-radius: 10px;
+    box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.step_line_div {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+
+}
+
+.step1_side_line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: 35;
+}
+
+.step2_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: -34;
+
+
+}
+
+#step2 {
+    margin-left: -48px;
+}
+
+#step2 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+}
+
+#heading_summary {
+    color: #dadada;
+    font-weight: bold;
+
+}
+
+.step3_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -15;
+}
+
+#step3 {
+    margin-left: -24px;
+}
+
+#step3 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+#heading_payment {
+    color: #dadada;
+    font-weight: bold;
+
+}
+
+.step4_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -10;
+}
+
+#step4 {
+    margin-left: -48px;
+}
+
+#step4 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+.step5_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -28;
+
+
+}
+
+#step5 {
+    margin-left: -47px;
+}
+
+#step5 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+#heading_success {
+    color: #dadada;
+    font-weight: bold;
+}
+
+#heading_screenshot {
+    color: #dadada;
+    font-weight: bold;
+}
+
+.step6_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -18;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon {
+    font-weight: bold;
+
+    font-size: 28px;
+}
+
+.step_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+
+}
+
+#step1 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+}
+
+.heading {
+    color: green;
+    font-weight: bold;
+}
+
+.comments_sections {
+    width: 100%;
+    display: flex;
+}
+
+.comment_input {
+
+    border: 2px solid #dadada;
+    height: auto;
+    width: 100%;
+    background-color: #fafafa;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 80px;
+
+}
+
+.comment_input input {
+
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    overflow-y: auto;
+    outline: none;
+}
+
+.sub_btn_comment {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(199, 199, 199);
+    padding: 10px;
+    width: 100px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+
+
+}
+
+.comment_heading {
+    padding: 40px 10px;
+    border-top: 2px solid #dadada;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+
+
+}
+
+.comment_heading h2 {
+    margin-left: 10px;
+    background-color: rgb(199, 199, 199);
+    padding: 0px 10px;
+    border-radius: 10px;
+
+}
+
+
+.users_reviews {
+
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.img_name {
+    display: flex;
+    align-items: center;
+}
+
+.img_name h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.msg {
+    padding-left: 50px;
+}
+
+.duration h1 {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #888787;
+    display: flex;
+    align-items: center;
+}
+
+.scroll_view {
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.left_part {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 10px;
+    height: 800px;
+
+}
+
+.similar_items {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align items to the top */
+    padding: 0px 20px;
+    border: 2px solid #dadada;
+    height: 500px;
+    margin-top: 200px;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    /* Optional: scroll if content overflows */
+}
+
+.similar_items h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.similar_heading h1 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.item_similar_image img {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.similar_container {
+    border: 2px solid #dadada;
+    display: flex;
+    align-items: center;
+    /* vertically center image and text */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    width: 450px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.custom_picker {
+    margin-top: 30px;
+    background: red;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+.time_input {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #333;
+}
+
+.time_input input[type="time"] {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #dadada;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.time_input input[type="time"]:focus {
+    border-color: #FF5555;
+}
+
+
+
+
+
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+}
+
+.modal_content h2 {
+    margin-bottom: 20px;
+}
+
+.modal_actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal_actions button {
+    background-color: #FF5555;
+
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.rent_btn button:disabled {
+    background-color: rgb(255, 146, 146);
+    cursor: not-allowed;
+}
+
+
+
+
+
+.main_content_container {
+    margin-top: 50px;
+    padding: 0 1rem;
+}
+
+/* Flex wrap and column stacking */
+.left_container {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* For buttons */
+.date_and_pay_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Main content styling */
+.left_inner_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 400px;
+}
+
+.item_image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 8px 19px rgba(0, 0, 0, 0.5);
+}
+
+.item_name {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.area,
+.description {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5rem;
+}
+
+.admin_div {
+
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.owner_details {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Responsive buttons */
+.rent_btn button {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.rent_btn1 button,
+.rent_btn1 select {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+
+/* Side images grid */
+.images_parts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.sides img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+/* Similar items */
+.similar_items {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.similar_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item_similar_image img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.view_btn button {
+    padding: 5px 10px;
+    background-color: #e00000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 400px;
+}
+
+/* ======== MEDIA QUERIES ======== */
+@media screen and (max-width: 768px) {
+    html{
+        width: 100%;
+    }
+    .left_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_inner_div {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+
+
+    .item_image img,
+    .sides img {
+        max-width: 90%;
+    }
+
+    .item_image img {
+        margin-left: 0px;
+    }
+
+    .item_name {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+
+    }
+
+    .rent_btn button,
+    .rent_btn1 button,
+    .rent_btn1 select {
+        width: 90%;
+    }
+
+    .similar_items {
+        align-items: center;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .similar_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .comments_sections {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .left_part{
+        width: 100%;
+        height: 700px;
+        
+    }
+
+    .calender_and_delivery {
+        display: flex;
+        width: 100%;
+    }
+    .rent_btn1 {
+        width: 50%;
+    }
+    .rent_btn {
+        width:60%;
+    }
+    .images_parts{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0.1rem auto;
+        
+    }
+
+
+
+
+
+
+
+
+    .step_line_div {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+        
+        width: 100%;
+
+
+    }
+
+    .step1_side_line {
+        background-color: green;
+        height: 2px;
+        width: 90px;
+        margin-top: -30px;
+        position: relative;
+        left: 2;
+    }
+
+    .step2_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -2px;
+
+
+    }
+
+    #step2 {
+        margin-left: -4px;
+        margin-top: -15px;
+    }
+
+    #step2 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+    }
+
+    #heading_summary {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step3_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -3;
+    }
+
+    #step3 {
+        margin-left: -5px;
+        margin-top: -15px;
+    }
+
+    #step3 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_payment {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step4_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -2;
+    }
+
+    #step4 {
+        margin-left: -8px;
+    }
+
+    #step4 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    .step5_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -6;
+
+
+    }
+
+    #step5 {
+        margin-left: -8px;
+        margin-top: -15px;
+
+    }
+
+    #step5 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_success {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+    }
+
+    #heading_screenshot {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+
+    .step6_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -8;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .icon {
+        font-weight: bold;
+
+        font-size: 20px;
+    }
+
+    .step_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 150px;
+        margin-top: -30px;
+
+    }
+
+    #step1 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+
+    }
+
+    .heading {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+
+}

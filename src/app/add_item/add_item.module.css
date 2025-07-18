@@ -1,0 +1,108 @@
+.main_content_container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post_heading h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .form_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input_field input,
+  .input_field textarea,
+  .input_field select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .input_field textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .upload_images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .image_box {
+    width: 48%;
+    aspect-ratio: 1/1;
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .placeholder {
+    text-align: center;
+    color: #999;
+    font-size: 18px;
+  }
+  
+  .preview_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .register_btn {
+    text-align: center;
+  }
+  
+  .register_btn button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .register_btn button:hover {
+    background-color: #0059c9;
+  }
+  
+  .dialog_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.dialog_box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}

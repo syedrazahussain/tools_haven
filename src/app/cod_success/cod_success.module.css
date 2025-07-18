@@ -1,0 +1,566 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background: #f5f7fa;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.card h1 {
+    font-size: 28px;
+    color: #1976d2;
+    margin-bottom: 16px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #444;
+}
+
+.card button {
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #125ea7;
+}
+
+.home_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.home_btn i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-top: 3px solid #333;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.step_line_div {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+
+.step1_side_line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: 35;
+}
+
+.step2_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: -34;
+
+
+}
+
+#step2 {
+    margin-left: -48px;
+}
+
+#step2 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+}
+
+#heading_summary {
+    color: green;
+    font-weight: bold;
+
+}
+
+.step3_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -13;
+}
+
+#step3 {
+    margin-left: -24px;
+}
+
+#step3 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+
+}
+
+#heading_payment {
+    color: green;
+    font-weight: bold;
+
+}
+
+.step4_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -10;
+}
+
+#step4 {
+    margin-left: -48px;
+}
+
+#step4 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+.step5_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -24;
+
+
+}
+
+#heading_screenshot {
+    color: #dadada;
+    font-weight: bold;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon {
+    font-weight: bold;
+
+    font-size: 28px;
+}
+
+.step_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+
+}
+
+#step1 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+}
+
+.heading {
+    color: green;
+    font-weight: bold;
+}
+
+#step5 {
+    margin-left: -40px;
+}
+
+#step5 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+
+}
+
+#heading_success {
+
+    color: green;
+    font-weight: bold;
+}
+
+.step6_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -18;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        height: 100vh;
+    }
+
+    .card {
+        padding: 25px;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: -170px;
+    }
+
+    .card h1 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .home_btn i {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+
+    .step_line_div {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+
+        width: 100%;
+
+
+    }
+
+    .step1_side_line {
+        background-color: green;
+        height: 2px;
+        width: 90px;
+        margin-top: -30px;
+        position: relative;
+        left: 2;
+    }
+
+    .step2_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -2px;
+
+
+    }
+
+    #step2 {
+        margin-left: -4px;
+        margin-top: -15px;
+    }
+
+    #step2 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+
+    }
+
+    #heading_summary {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step3_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -3;
+    }
+
+    #step3 {
+        margin-left: -5px;
+        margin-top: -15px;
+    }
+
+    #step3 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_payment {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step4_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -2;
+    }
+
+    #step4 {
+        margin-left: -8px;
+    }
+
+    #step4 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    .step5_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -6;
+
+
+    }
+
+    #step5 {
+        margin-left: -8px;
+        margin-top: -15px;
+
+    }
+
+    #step5 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_success {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+    }
+
+    #heading_screenshot {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+
+    .step6_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -8;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .icon {
+        font-weight: bold;
+
+        font-size: 20px;
+    }
+
+    .step_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 150px;
+        margin-top: -30px;
+
+    }
+
+    #step1 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+
+    }
+
+    .heading {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+}

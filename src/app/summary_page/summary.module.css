@@ -1,0 +1,613 @@
+.summary_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #fcfafa;
+    padding: 70px 0px;
+    margin-top: 20px;
+    
+}
+.booking_heading{
+    display: flex ;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.summary_image {
+    border: 2px solid #dadada;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#fcfbfb;
+    border-radius: 10px;
+    
+}
+.summary_image img{
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.summary_content_container{
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.subtotal,.platform,.total{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #dadada;
+    padding: 10px;
+}
+.subtotal h2,.platform h2,.summary_name h1{
+    font-weight: bold;
+    font-size: 18px;
+}
+.summary_name h2{
+    color: #a7a6a6;
+}
+.summary_price h1{
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
+.total {
+    color: blue;
+    background-color: rgb(221, 221, 255);
+    border-radius: 10px;
+    font-weight: bold;
+}
+.total h2 {
+    font-size: 20px;
+}
+.pay_btn button{
+    background-color: green;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.price_and_date_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    
+}
+.step_line_div {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+
+.step1_side_line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: 35;
+}
+
+.step2_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: -34;
+
+
+}
+
+#step2 {
+    margin-left: -48px;
+}
+
+#step2 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+}
+
+#heading_summary {
+    color: green;
+    font-weight: bold;
+
+}
+
+.step3_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -13;
+}
+
+#step3 {
+    margin-left: -24px;
+}
+
+#step3 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+#heading_payment {
+    color: #dadada;
+    font-weight: bold;
+
+}
+
+.step4_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -10;
+}
+
+#step4 {
+    margin-left: -48px;
+}
+
+#step4 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+.step5_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -38;
+    
+    
+}
+
+#heading_screenshot {
+    color: #dadada;
+    font-weight: bold;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon {
+    font-weight: bold;
+
+    font-size: 28px;
+}
+
+.step_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+
+}
+
+#step1 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+}
+
+.heading {
+    color: green;
+    font-weight: bold;
+}
+.step5_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -28;
+
+
+}
+
+#step5 {
+    margin-left: -47px;
+}
+
+#step5 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+#heading_success {
+    color: #dadada;
+    font-weight: bold;
+}
+.step6_side_Line{
+     background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -18;
+
+}
+
+.loading_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+
+@media (max-width: 768px) {
+    .summary_content_container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .summary_image {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .summary_image img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .summary_name h1 {
+        font-size: 18px;
+    }
+
+    .summary_name h2 {
+        font-size: 14px;
+    }
+  
+
+    .price_and_date_div {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .booking_heading {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .subtotal, .platform, .total {
+        font-size: 14px;
+        flex-direction: row;
+    }
+
+    .total h2 {
+        font-size: 16px;
+    }
+
+    .pay_btn button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .step_line_div {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+        
+        width: 100%;
+
+
+    }
+
+    .step1_side_line {
+        background-color: green;
+        height: 2px;
+        width: 90px;
+        margin-top: -30px;
+        position: relative;
+        left: 2;
+    }
+
+    .step2_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -2px;
+
+
+    }
+
+    #step2 {
+        margin-left: -4px;
+        margin-top: -15px;
+    }
+
+    #step2 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+
+    }
+
+    #heading_summary {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step3_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -3;
+    }
+
+    #step3 {
+        margin-left: -5px;
+        margin-top: -15px;
+    }
+
+    #step3 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_payment {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step4_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -2;
+    }
+
+    #step4 {
+        margin-left: -8px;
+    }
+
+    #step4 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    .step5_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -6;
+
+
+    }
+
+    #step5 {
+        margin-left: -8px;
+        margin-top: -15px;
+
+    }
+
+    #step5 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_success {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+    }
+
+    #heading_screenshot {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+
+    .step6_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -8;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .icon {
+        font-weight: bold;
+
+        font-size: 20px;
+    }
+
+    .step_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 150px;
+        margin-top: -30px;
+
+    }
+
+    #step1 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+
+    }
+
+    .heading {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+
+    
+}
+
+

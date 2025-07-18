@@ -1,0 +1,487 @@
+
+.main_container1{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    
+
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.loading_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.step_line_div {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+
+.step1_side_line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: 35;
+}
+
+.step2_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+    position: relative;
+    left: -34;
+
+
+}
+
+#step2 {
+    margin-left: -48px;
+}
+
+#step2 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+}
+
+#heading_summary {
+    color: green;
+    font-weight: bold;
+
+}
+
+.step3_side_Line {
+    background-color: green;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -13;
+}
+
+#step3 {
+    margin-left: -24px;
+}
+
+#step3 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+
+}
+
+#heading_payment {
+    color: green;
+    font-weight: bold;
+
+}
+
+.step4_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -10;
+}
+
+#step4 {
+    margin-left: -48px;
+}
+
+#step4 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+
+.step5_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -10;
+    
+    
+}
+
+#heading_screenshot {
+    color: #dadada;
+    font-weight: bold;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon {
+    font-weight: bold;
+
+    font-size: 28px;
+}
+
+.step_side_Line {
+    background-color: #dadada;
+    height: 2px;
+    width: 150px;
+    margin-top: -30px;
+
+}
+
+#step1 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+
+}
+
+.heading {
+    color: green;
+    font-weight: bold;
+}
+#step5 {
+    margin-left: -18px;
+}
+
+#step5 i {
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+    color: white;
+
+
+}
+#heading_success {
+
+    color: #dadada;
+    font-weight: bold;
+}
+
+.step6_side_Line{
+    background-color: #dadada;
+    height: 2px;
+    width: 160px;
+    margin-top: -30px;
+    position: relative;
+    left: -18;
+    
+}
+
+@media (max-width:768px) {
+     .main_container1 {
+        padding: 1rem;
+    }
+
+     .card {
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+    }
+     .step_line_div {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+        
+        width: 100%;
+
+
+    }
+
+    .step1_side_line {
+        background-color: green;
+        height: 2px;
+        width: 90px;
+        margin-top: -30px;
+        position: relative;
+        left: 2;
+    }
+
+    .step2_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -2px;
+
+
+    }
+
+    #step2 {
+        margin-left: -4px;
+        margin-top: -15px;
+    }
+
+    #step2 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+
+    }
+
+    #heading_summary {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step3_side_Line {
+        background-color: green;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -3;
+    }
+
+    #step3 {
+        margin-left: -5px;
+        margin-top: -15px;
+    }
+
+    #step3 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_payment {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+
+    }
+
+    .step4_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -2;
+    }
+
+    #step4 {
+        margin-left: -8px;
+    }
+
+    #step4 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    .step5_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 170px;
+        margin-top: -30px;
+        position: relative;
+        left: -2;
+
+
+    }
+
+    #step5 {
+        margin-left: -8px;
+        margin-top: -15px;
+
+    }
+
+    #step5 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dadada;
+        color: white;
+        font-size: 20px;
+
+
+    }
+
+    #heading_success {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+    }
+
+    #heading_screenshot {
+        color: #dadada;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+
+    .step6_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 160px;
+        margin-top: -30px;
+        position: relative;
+        left: -8;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .icon {
+        font-weight: bold;
+
+        font-size: 20px;
+    }
+
+    .step_side_Line {
+        background-color: #dadada;
+        height: 2px;
+        width: 150px;
+        margin-top: -30px;
+
+    }
+
+    #step1 i {
+        border-radius: 50%;
+        border: 2px solid;
+        padding: 10px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: white;
+
+    }
+
+    .heading {
+        color: green;
+        font-weight: bold;
+        font-size: 0.6rem !important;
+        text-align: center;
+    }
+
+    
+}
