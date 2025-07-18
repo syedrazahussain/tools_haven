@@ -177,7 +177,8 @@ export default function Home() {
           {/* Hero Section */}
           <div className={styles.hero_section}>
             <Image src={herosection} alt="hero image" width={1600} height={500} />
-            <div className={styles.hero_title}><h1>&quot;Discover Tools Haven - Rent smarter and work faster&quot;</h1></div>
+            <div className={styles.hero_title}><h1>&quot;Discover Tools Haven - Rent smarter and work faster&quot;</h1>
+            </div>
           </div>
 
           {/* Search Bar */}

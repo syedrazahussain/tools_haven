@@ -122,6 +122,7 @@ export default function User_login() {
                 Register
               </Link>
             </h1>
+
           </div>
 
           <div className={styles.register_btn}>

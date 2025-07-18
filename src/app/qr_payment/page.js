@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import Image from "next/image";
 import styles from "./qr_payment.module.css";
 import Header from "../../../components/Header/page";
 import { BsCalendarDate } from "react-icons/bs";
@@ -115,7 +116,14 @@ export default function QRPayment() {
                     <div className={styles.scanner_cards}>
                         <h1>Scan to Pay</h1>
                         {qr ? (
-                            <img src={qr} alt="QR Code" className={styles.qrImage} />
+                            <Image
+                                src={qr}
+                                alt="QR Code"
+                                className={styles.qrImage}
+                                width={300}
+                                height={300}
+                                priority
+                            />
                         ) : (
                             <p>QR code not found.</p>
                         )}
@@ -138,7 +146,7 @@ export default function QRPayment() {
                             Your payment will not be verified. <br />
                             Your booking will not be confirmed. <br /><br />
                             🕒 If verification fails or times out: <br />
-                            You’ll be redirected to a “Payment Failed” page. <br />
+                            You&apos;ll be redirected to a &quot;Payment Failed&quot; page. <br />
                             You can try again from your Order Details section. <br />
                         </p>
                     </div>
