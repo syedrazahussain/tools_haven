@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = 'force-dynamic';
+
 import Header from "../../../components/Header/page";
 import styles from "./screenshot.module.css";
 import { BsCalendarDate } from "react-icons/bs";
