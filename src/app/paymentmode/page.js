@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic';
 
 import { useSearchParams, useRouter } from 'next/navigation';
 import { CheckCircle, IndianRupee, Wallet } from 'lucide-react';
-import useRoleGuard from "../../../hooks/useRoleGuard"; // assuming useRoleGuard is a custom hook in an index.js or direct file
+import useRoleGuard from '../../../hooks/useRoleGuard/page';
 
 import { useState, useEffect } from "react";
 import { FaSpinner } from "react-icons/fa";
