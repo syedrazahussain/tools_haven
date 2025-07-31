@@ -7,15 +7,18 @@ export default function useRoleGuard(allowedRoles = []) {
   const [authorized, setAuthorized] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    const role = localStorage.getItem('role');
+    // ✅ Only run on client
+    if (typeof window !== 'undefined') {
+      const token = localStorage.getItem('token');
+      const role = localStorage.getItem('role');
 
-    if (!token || !allowedRoles.includes(role)) {
-      router.replace('/unauthorized');
-    } else {
-      setAuthorized(true);
+      if (!token || !allowedRoles.includes(role)) {
+        router.replace('/unauthorized');
+      } else {
+        setAuthorized(true);
+      }
     }
-  }, []);
+  }, [allowedRoles, router]);
 
   return authorized;
 }
