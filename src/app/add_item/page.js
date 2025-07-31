@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import styles from './add_item.module.css';
 import ToolsmasterHeader from '../../../components/ToolsmasterHeader/page';
-import useRoleGuard from '../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../hooks/useRoleGuard';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function Additem() {

@@ -9,7 +9,7 @@ import item from "../../../public/upload_image.png";
 import item1 from "../../../public/manage_tools.png";
 import item2 from "../../../public/rent_request.png";
 import Link from "next/link";
-import useRoleGuard from "../../../hooks/useRoleGuard/page";
+import useRoleGuard from "../../../hooks/useRoleGuard";
 import { FaSpinner } from "react-icons/fa";
 
 export default function ToolsmasterHomepage() {

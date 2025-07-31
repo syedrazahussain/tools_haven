@@ -5,7 +5,7 @@ import ToolsmasterHeader from '../../../components/ToolsmasterHeader/page';
 import styles from './managetools.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import useRoleGuard from '../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../hooks/useRoleGuard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';

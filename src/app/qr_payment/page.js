@@ -10,7 +10,7 @@ import { BsCalendarDate } from "react-icons/bs";
 import { LiaClipboardListSolid, LiaRupeeSignSolid } from "react-icons/lia";
 import { RiScreenshot2Line } from "react-icons/ri";
 import { GiConfirmed } from "react-icons/gi";
-import useRoleGuard from "../../../hooks/useRoleGuard/page";
+import useRoleGuard from "../../../hooks/useRoleGuard";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

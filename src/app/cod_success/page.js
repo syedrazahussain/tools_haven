@@ -7,7 +7,7 @@ import { RiScreenshot2Line } from "react-icons/ri";
 import { GiConfirmed } from "react-icons/gi";
 import { FaHome } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import useRoleGuard from '../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../hooks/useRoleGuard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';

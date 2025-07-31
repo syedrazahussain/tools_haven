@@ -7,7 +7,7 @@ import { MdPending } from "react-icons/md";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import useRoleGuard from '../../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../../hooks/useRoleGuard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ClipLoader } from 'react-spinners';

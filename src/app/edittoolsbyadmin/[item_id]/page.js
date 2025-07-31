@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import styles from '../../add_item/add_item.module.css';
 import ToolsmasterHeader from '../../../../components/ToolsmasterHeader/page';
-import useRoleGuard from '../../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../../hooks/useRoleGuard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

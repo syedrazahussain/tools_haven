@@ -16,7 +16,7 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
-import useRoleGuard from '../../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../../hooks/useRoleGuard';
 
 export default function Content_page() {
     useRoleGuard(['renter']);

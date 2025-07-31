@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import useRoleGuard from '../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../hooks/useRoleGuard';
 import ToolsmasterHeader from '../../../components/ToolsmasterHeader/page';
 
 export default function ListAllRequest() {

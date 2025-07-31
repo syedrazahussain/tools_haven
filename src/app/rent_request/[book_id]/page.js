@@ -11,7 +11,7 @@ import {
   FaTools,
   FaTruck,
 } from 'react-icons/fa';
-import useRoleGuard from '../../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../../hooks/useRoleGuard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';

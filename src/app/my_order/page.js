@@ -5,7 +5,7 @@ import styles from './my_order.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import useRoleGuard from '../../../hooks/useRoleGuard/page';
+import useRoleGuard from '../../../hooks/useRoleGuard';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function MyOrder() {
