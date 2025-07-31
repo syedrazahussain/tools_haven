@@ -105,39 +105,38 @@ export default function PaymentMode() {
         }
 
         try {
-            if (typeof window !== 'undefined') {
-                const res = await fetch("http://localhost:5000/user/bookings/cod", {
-                    method: "POST",
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}`,
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        item_id: itemid,
-                        start_date: startDateParam,
-                        end_date: endDateParam,
-                        delivery_type: pickup,
-                        subtotal,
-                        pickupFee,
-                        platformFee,
-                        total_price: total,
-                        order_closed: false,
-                        payment_mode: "Cash on delivery (cod)",
-                    }),
-                });
+            
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/bookings/cod`, {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    item_id: itemid,
+                    start_date: startDateParam,
+                    end_date: endDateParam,
+                    delivery_type: pickup,
+                    subtotal,
+                    pickupFee,
+                    platformFee,
+                    total_price: total,
+                    order_closed: false,
+                    payment_mode: "Cash on delivery (cod)",
+                }),
+            });
 
-                if (res.ok) {
-                    toast.success("Booking successful with Cash on Delivery");
+            if (res.ok) {
+                toast.success("Booking successful with Cash on Delivery");
 
 
 
-                    setTimeout(() => {
-                        router.push("/cod_success");
-                    }, 1500);
-                }
-                else {
-                    toast.error("Booking failed. Try again.");
-                }
+                setTimeout(() => {
+                    router.push("/cod_success");
+                }, 1500);
+            }
+            else {
+                toast.error("Booking failed. Try again.");
             }
         } catch (err) {
             toast.error("Something went wrong");
