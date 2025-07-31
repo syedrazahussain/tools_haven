@@ -1,5 +1,8 @@
 "use client";
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+export const runtime = 'edge'; 
+
 
 import Header from "../../../components/Header/page";
 import styles from "./screenshot.module.css";
@@ -73,7 +76,7 @@ export default function ScreenshotPage() {
     });
 
     try {
-      const res = await fetch("http://localhost:5000/user/bookings", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/bookings`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
