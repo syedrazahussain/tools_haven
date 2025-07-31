@@ -1,5 +1,6 @@
 'use client';
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 import Header from "../../../components/Header/page";
 import Image from "next/image";
