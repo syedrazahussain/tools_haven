@@ -41,7 +41,7 @@ export default function Content_page() {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user/getItemById/${id}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/getItemById/${id}`);
                 const data = await response.json();
                 setgettools(data);
             } catch (error) {
@@ -51,7 +51,7 @@ export default function Content_page() {
 
         const fetchAllTools = async () => {
             try {
-                const res = await fetch('http://localhost:5000/user/fetchitem');
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/fetchitem`);
                 const data = await res.json();
                 setAllTools(data);
             } catch (error) {
@@ -61,7 +61,7 @@ export default function Content_page() {
 
         const fetchBookedDates = async () => {
             try {
-                const res = await fetch(`http://localhost:5000/user/bookedDates/${id}`);
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/bookedDates/${id}`);
                 const data = await res.json();
                 setBookedDates(data.bookedDates || []);
             } catch (error) {
@@ -160,7 +160,7 @@ export default function Content_page() {
                 <div className={styles.left_container}>
                     <div className={styles.item_image}>
                         <Image
-                            src={`http://localhost:5000/uploads/${gettools.image1}`}
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${gettools.image1}`}
                             width={400}
                             height={100}
                             alt={gettools.title || "Tool Image"}
@@ -212,7 +212,7 @@ export default function Content_page() {
                         img ? (
                             <div className={styles.sides} key={i}>
                                 <Image
-                                    src={`http://localhost:5000/uploads/${img}`}
+                                    src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img}`}
                                     width={160}
                                     height={0}
                                     alt={gettools.title || "Tool Image"}
@@ -262,7 +262,7 @@ export default function Content_page() {
                                 <div className={styles.similar_container} key={tool.item_id}>
                                     <div className={styles.item_similar_image}>
                                         <Image
-                                            src={`http://localhost:5000/uploads/${tool.image1}`}
+                                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${tool.image1}`}
                                             width={80}
                                             height={70}
                                             alt={tool.title}

@@ -13,7 +13,7 @@ export async function registerPush() {
     return;
   }
 
-  const { publicKey } = await fetch("http://localhost:5000/publicKey").then(res => res.json());
+  const { publicKey } = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/publicKey`).then(res => res.json());
 
   const existingSub = await registration.pushManager.getSubscription();
   if (existingSub) {
@@ -26,7 +26,7 @@ export async function registerPush() {
     applicationServerKey: urlBase64ToUint8Array(publicKey),
   });
 
-  await fetch("http://localhost:5000/subscribe", {
+  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/subscribe`, {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: { "Content-Type": "application/json" },

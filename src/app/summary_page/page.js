@@ -56,7 +56,7 @@ export default function SummaryPage() {
 
     const handlePayClick = async () => {
         try {
-            const res = await fetch("http://localhost:5000/user/generate-qr", {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/generate-qr`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ upi_id: upi_id, amount: total }),
@@ -146,7 +146,7 @@ export default function SummaryPage() {
 
                     <div className={styles.summary_image}>
                         <Image
-                            src={image ? `http://localhost:5000/uploads/${image}` : "/hammer.jpg"}
+                            src={image ? `${process.env.NEXT_PUBLIC_API_URL}/uploads/${image}` : "/hammer.jpg"}
                             alt="Item image"
                             height={150}
                             width={150}

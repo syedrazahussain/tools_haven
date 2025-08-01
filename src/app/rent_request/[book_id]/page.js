@@ -39,16 +39,16 @@ export default function RentRequestPage(paramsPromise) {
   useEffect(() => {
     const fetchBookingAndItem = async () => {
       try {
-        const bookingRes = await fetch(`http://localhost:5000/user/get_request/${book_id}`);
+        const bookingRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/get_request/${book_id}`);
         const bookingData = await bookingRes.json();
         setBooking(bookingData);
 
         if (bookingData?.item_id && bookingData?.user_id) {
-          const itemRes = await fetch(`http://localhost:5000/user/item/${bookingData.item_id}`);
+          const itemRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/item/${bookingData.item_id}`);
           const itemData = await itemRes.json();
           setItem(itemData);
 
-          const userinfoRes = await fetch(`http://localhost:5000/user/userinfo/${bookingData.user_id}`);
+          const userinfoRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/userinfo/${bookingData.user_id}`);
           const userData = await userinfoRes.json();
           setUserinfo(userData);
         }
@@ -89,7 +89,7 @@ export default function RentRequestPage(paramsPromise) {
   const cancelBooking = async () => {
     setLoadingBtn(prev => ({ ...prev, cancel: true }));
     try {
-      const res = await fetch(`http://localhost:5000/user/cancel_booking/${booking.booking_id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/cancel_booking/${booking.booking_id}`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -155,7 +155,7 @@ export default function RentRequestPage(paramsPromise) {
           {item?.image1 && (
             <div className={styles.imageWrapper}>
               <img
-                src={`http://localhost:5000/uploads/${item.image1}`}
+                src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image1}`}
                 alt="Item"
                 className={styles.thumbnail}
               />
@@ -205,7 +205,7 @@ export default function RentRequestPage(paramsPromise) {
               <h3>🧾 Payment Screenshot</h3>
               {booking.screenshot ? (
                 <img
-                  src={`http://localhost:5000/${booking.screenshot.replace('\\', '/')}`}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}/${booking.screenshot.replace('\\', '/')}`}
                   alt="Payment Screenshot"
                   className={styles.screenshot}
                 />
@@ -234,7 +234,7 @@ export default function RentRequestPage(paramsPromise) {
                   className={styles.btnApprove}
                   onClick={() =>
                     updateStatus(
-                      `http://localhost:5000/user/update_payment_status/${booking.booking_id}`,
+                      `${process.env.NEXT_PUBLIC_API_URL}/user/update_payment_status/${booking.booking_id}`,
                       'success',
                       'approve'
                     )
@@ -247,7 +247,7 @@ export default function RentRequestPage(paramsPromise) {
                   className={styles.btnApprove}
                   onClick={() =>
                     updateStatus(
-                      `http://localhost:5000/user/update_payment_status/${booking.booking_id}`,
+                      `${process.env.NEXT_PUBLIC_API_URL}/user/update_payment_status/${booking.booking_id}`,
                       'reject',
                       'reject'
                     )
@@ -262,7 +262,7 @@ export default function RentRequestPage(paramsPromise) {
                   className={styles.btnDeliver}
                   onClick={() =>
                     updateStatus(
-                      `http://localhost:5000/user/update_delivery_status/${booking.booking_id}`,
+                      `${process.env.NEXT_PUBLIC_API_URL}/user/update_delivery_status/${booking.booking_id}`,
                       'delivered',
                       'deliver'
                     )
@@ -275,7 +275,7 @@ export default function RentRequestPage(paramsPromise) {
                   className={styles.btnDeliver}
                   onClick={() =>
                     updateStatus(
-                      `http://localhost:5000/user/update_delivery_status/${booking.booking_id}`,
+                      `${process.env.NEXT_PUBLIC_API_URL}/user/update_delivery_status/${booking.booking_id}`,
                       'not delivered',
                       'notDeliver'
                     )
@@ -290,7 +290,7 @@ export default function RentRequestPage(paramsPromise) {
                   className={styles.btnReturn}
                   onClick={() =>
                     updateStatus(
-                      `http://localhost:5000/user/update_return_status/${booking.booking_id}`,
+                      `${process.env.NEXT_PUBLIC_API_URL}/user/update_return_status/${booking.booking_id}`,
                       'returned',
                       'return'
                     )
@@ -303,7 +303,7 @@ export default function RentRequestPage(paramsPromise) {
                   className={styles.btnReturn}
                   onClick={() =>
                     updateStatus(
-                      `http://localhost:5000/user/update_return_status/${booking.booking_id}`,
+                      `${process.env.NEXT_PUBLIC_API_URL}/user/update_return_status/${booking.booking_id}`,
                       'not returned',
                       'notReturn'
                     )

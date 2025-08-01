@@ -36,7 +36,7 @@ const checkAuth = async () => {
   if (!token || !role) return { isAuth: false, role: null };
 
   try {
-    const res = await fetch("http://localhost:5000/auth/is_verify", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/is_verify`, {
       headers: { token },
     });
     const verified = await res.json();
@@ -94,7 +94,7 @@ export default function Home() {
 
   const getName = async () => {
     try {
-      const response = await fetch("http://localhost:5000/dashboard/", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/dashboard/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -109,7 +109,7 @@ export default function Home() {
 
   const fetchTools = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user/fetchitem");
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/fetchitem`);
       const data = await response.json();
       setToolsData(data);
     } catch (error) {
@@ -230,7 +230,7 @@ export default function Home() {
                     <div key={tool.item_id} className={styles.item_data1}>
                       <div className={styles.item_image}>
                         <Image
-                          src={`http://localhost:5000/uploads/${tool.image1}`}
+                          src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${tool.image1}`}
                           alt="item image"
                           width={250}
                           height={150}

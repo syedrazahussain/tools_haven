@@ -17,7 +17,7 @@ export default function MyOrder() {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await fetch('http://localhost:5000/user/my_order', {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/my_order`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },
@@ -105,7 +105,7 @@ export default function MyOrder() {
                                             Booking Date: {new Date(ord.created_at).toLocaleString()}
                                         </div>
                                         <Image
-                                            src={`http://localhost:5000/uploads/${ord.image1 || 'default.jpg'}`}
+                                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${ord.image1 || 'default.jpg'}`}
                                             alt="item image"
                                             height={100}
                                             width={100}

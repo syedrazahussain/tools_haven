@@ -20,7 +20,7 @@ export default function ListAllRequest() {
         const fetchBookings = async () => {
             const token = localStorage.getItem("token");
             try {
-                const response = await fetch('http://localhost:5000/user/get_request', {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/get_request`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export default function ListAllRequest() {
 
                 const itemPromises = cleanData.map(async (booking) => {
                     if (booking.item_id) {
-                        const itemRes = await fetch(`http://localhost:5000/user/item/${booking.item_id}`);
+                        const itemRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/item/${booking.item_id}`);
                         const itemData = await itemRes.json();
                         return { [booking.item_id]: itemData };
                     }
@@ -116,7 +116,7 @@ export default function ListAllRequest() {
                     {bookings.map((b, index) => {
                         const item = items[b.item_id];
                         const imageUrl = item?.image1
-                            ? `http://localhost:5000/uploads/${item.image1}`
+                            ? `${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image1}`
                             : null;
 
                         return (

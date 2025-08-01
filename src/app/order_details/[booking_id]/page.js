@@ -22,7 +22,7 @@ export default function OrderDetails() {
 
         const fetchDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/user/order_details/${booking_id}`, {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/order_details/${booking_id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
                     }
@@ -48,7 +48,7 @@ export default function OrderDetails() {
                                 status = "closed";
                             } else {
                                 timeoutId = setTimeout(async () => {
-                                    const res = await fetch(`http://localhost:5000/user/close_order/${booking_id}`, {
+                                    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/close_order/${booking_id}`, {
                                         method: "POST",
                                         headers: {
                                             "Content-Type": "application/json",
@@ -89,7 +89,7 @@ export default function OrderDetails() {
         if (!confirmCancel) return;
 
         try {
-            const res = await fetch(`http://localhost:5000/user/cancel_booking/${booking_id}`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/cancel_booking/${booking_id}`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -163,7 +163,7 @@ export default function OrderDetails() {
                             </div>
                             <div className={styles.image_and_title}>
                                 <div className={styles.image}>
-                                    <img src={`http://localhost:5000/uploads/${details.image1}`} width={200} />
+                                    <img src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${details.image1}`} width={200} />
                                 </div>
                                 <div className={styles.current_and_title}>
                                     <div className={styles.current_stage_heading}>

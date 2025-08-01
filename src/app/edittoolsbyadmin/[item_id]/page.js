@@ -32,7 +32,7 @@ export default function EditToolsByAdmin() {
   useEffect(() => {
     const fetchTool = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/user/gettool/${item_id}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/gettool/${item_id}`);
         const data = await res.json();
 
         if (data) {
@@ -98,7 +98,7 @@ export default function EditToolsByAdmin() {
     });
 
     try {
-      const res = await fetch(`http://localhost:5000/user/updatetool/${item_id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/updatetool/${item_id}`, {
         method: 'PUT',
         body: data,
       });
@@ -210,7 +210,7 @@ export default function EditToolsByAdmin() {
                       {img instanceof File ? (
                         <img src={URL.createObjectURL(img)} alt="Preview" className={styles.preview_image} />
                       ) : img ? (
-                        <img src={`http://localhost:5000/uploads/${img}`} alt="Tool Img" className={styles.preview_image} />
+                        <img src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img}`} alt="Tool Img" className={styles.preview_image} />
                       ) : (
                         <div className={styles.placeholder}><p>+</p><p>Upload</p></div>
                       )}

@@ -29,7 +29,7 @@ export default function Managetools() {
     const fetchtools = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await fetch('http://localhost:5000/user/managetool', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/managetool`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export default function Managetools() {
     if (!selectedToolToDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/user/deletetool/${selectedToolToDelete}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/deletetool/${selectedToolToDelete}`, {
         method: 'DELETE',
       });
 
@@ -121,7 +121,7 @@ export default function Managetools() {
                 <div className={styles.card_top_part_div}>
                   <div className={styles.image}>
                     <Image
-                      src={`http://localhost:5000/uploads/${tool.image1 || 'default.jpg'}`}
+                      src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${tool.image1 || 'default.jpg'}`}
                       alt="item image"
                       height={100}
                       width={100}
@@ -166,7 +166,7 @@ export default function Managetools() {
                         .map((img, idx) => (
                           <Image
                             key={idx}
-                            src={`http://localhost:5000/uploads/${img}`}
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img}`}
                             height={100}
                             width={100}
                             alt={`side-img-${idx + 1}`}

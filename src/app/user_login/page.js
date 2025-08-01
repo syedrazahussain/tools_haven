@@ -23,7 +23,7 @@ export default function User_login() {
       if (!token) return;
 
       try {
-        const res = await fetch('http://localhost:5000/auth/is_verify', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/is_verify`, {
           headers: { token },
         });
 
@@ -48,7 +48,7 @@ export default function User_login() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/auth/login', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
