@@ -30,7 +30,7 @@ export default function Header() {
             }
 
             try {
-                const response = await fetch('http://localhost:5000/auth/is_verify', {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/is_verify`, {
                     method: 'GET',
                     headers: {
                         token: token
