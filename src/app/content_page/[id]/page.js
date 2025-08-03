@@ -159,12 +159,15 @@ export default function Content_page() {
                 {/* Left */}
                 <div className={styles.left_container}>
                     <div className={styles.item_image}>
-                        <Image
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${gettools.image1}`}
-                            width={400}
-                            height={100}
-                            alt={gettools.title || "Tool Image"}
-                        />
+                        {gettools.image1 && (
+                            <Image
+                                src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${gettools.image1}`}
+                                width={400}
+                                height={100}
+                                alt={gettools.title || 'Tool Image'}
+                            />
+                        )}
+
                     </div>
 
                     <div className={styles.left_inner_div}>
