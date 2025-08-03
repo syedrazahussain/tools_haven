@@ -77,7 +77,10 @@
 
 .user_login_color {
   color: blue;
+  text-decoration: none; /* Remove default */
+ 
 }
+
 
 .have_account {
   margin-top: 10px;
@@ -96,7 +99,7 @@
 }
 
 /* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   .form_container {
     width: 90%;
     padding: 15px;

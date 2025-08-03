@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import 'modern-normalize/modern-normalize.css';
 import "./globals.css";
 
 
@@ -23,7 +24,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
