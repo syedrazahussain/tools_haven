@@ -557,14 +557,14 @@
     }
 
     .search_bar_div {
-        position: absolute;
-        top: 35%;
+        position: relative;
+        top: -150px;
         margin-left: -2rem;
         width: 90%;
     }
 
     .search_bar_div input {
-        width: 300px !important;
+        width: 320px !important;
 
 
     }
@@ -653,7 +653,7 @@
     }
 
     .search_bar_div {
-        width: 90%;
+        width: 80%;
         left: 50%;
         transform: translateX(-50%);
     }

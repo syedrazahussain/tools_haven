@@ -651,6 +651,7 @@
     height: 50px;
     width: 200px;
     cursor: pointer;
+    
 }
 
 /* Side images grid */
@@ -720,12 +721,25 @@
     max-width: 90%;
     width: 400px;
 }
+.fixedButton {
+    width: 200px;
+    height: 50px;
+   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
 
 /* ======== MEDIA QUERIES ======== */
 @media screen and (max-width: 768px) {
     /* html{
         width: 100%;
     } */
+     .main_content_container{
+        
+        overflow: hidden;
+     }
     .left_container {
         flex-direction: column;
         align-items: center;
@@ -760,9 +774,11 @@
     .rent_btn button,
     .rent_btn1 button,
     .rent_btn1 select {
-        width: 90%;
+        width: 100%;
+        
     }
 
+  
     .similar_items {
         align-items: center;
         width: 100%;
@@ -770,8 +786,9 @@
     }
 
     .similar_container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        width: 100%;
         text-align: center;
     }
 
@@ -790,8 +807,9 @@
         display: flex;
         width: 100%;
     }
-    .rent_btn1 {
-        width: 50%;
+    .rent_btn1 button {
+        width: 160px;
+        margin-right: 5px;
     }
     .rent_btn {
         width:60%;

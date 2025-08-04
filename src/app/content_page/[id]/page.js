@@ -192,7 +192,7 @@ export default function Content_page() {
                         <div className={styles.calender_and_delivery}>
 
                             <div className={styles.rent_btn1}>
-                                <button onClick={() => setShowModal(true)}>{selectedText}</button>
+                                <button className={styles.fixedButton} onClick={() => setShowModal(true)}>{selectedText}</button>
                             </div>
                             <div className={styles.rent_btn1}>
                                 <select value={pickupOption} onChange={(e) => setPickupOption(e.target.value)}>
@@ -215,7 +215,7 @@ export default function Content_page() {
                         img ? (
                             <div className={styles.sides} key={i}>
                                 <Image
-                                    src={gettools.image1}
+                                    src={img} // ✅ use the current image
                                     width={160}
                                     height={0}
                                     alt={gettools.title || "Tool Image"}
@@ -224,6 +224,7 @@ export default function Content_page() {
                         ) : null
                     )}
                 </div>
+
 
                 {/* Comments & Similar */}
                 <div className={styles.comments_sections}>
@@ -265,7 +266,7 @@ export default function Content_page() {
                                 <div className={styles.similar_container} key={tool.item_id}>
                                     <div className={styles.item_similar_image}>
                                         <Image
-                                           src={tool.image1}
+                                            src={tool.image1}
                                             width={80}
                                             height={70}
                                             alt={tool.title}
