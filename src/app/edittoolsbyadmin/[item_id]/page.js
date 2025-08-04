@@ -210,7 +210,7 @@ export default function EditToolsByAdmin() {
                       {img instanceof File ? (
                         <img src={URL.createObjectURL(img)} alt="Preview" className={styles.preview_image} />
                       ) : img ? (
-                        <img src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img}`} alt="Tool Img" className={styles.preview_image} />
+                        <img src={img} alt="Tool Img" className={styles.preview_image} />
                       ) : (
                         <div className={styles.placeholder}><p>+</p><p>Upload</p></div>
                       )}

@@ -146,7 +146,7 @@ export default function SummaryPage() {
 
                     <div className={styles.summary_image}>
                         <Image
-                            src={image ? `${process.env.NEXT_PUBLIC_API_URL}/uploads/${image}` : "/hammer.jpg"}
+                           src={image}
                             alt="Item image"
                             height={150}
                             width={150}

@@ -105,7 +105,14 @@ export default function MyOrder() {
                                             Booking Date: {new Date(ord.created_at).toLocaleString()}
                                         </div>
                                         <Image
-                                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${ord.image1 || 'default.jpg'}`}
+
+                                            
+
+                                            src={
+                                                ord.image1.startsWith("http")
+                                                    ? ord.image1
+                                                    : `/uploads/${ord.image1}`
+                                            }
                                             alt="item image"
                                             height={100}
                                             width={100}

@@ -163,7 +163,7 @@ export default function OrderDetails() {
                             </div>
                             <div className={styles.image_and_title}>
                                 <div className={styles.image}>
-                                    <img src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${details.image1}`} width={200} />
+                                    <img src={details.image1} width={200} />
                                 </div>
                                 <div className={styles.current_and_title}>
                                     <div className={styles.current_stage_heading}>

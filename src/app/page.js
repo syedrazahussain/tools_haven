@@ -230,11 +230,16 @@ export default function Home() {
                     <div key={tool.item_id} className={styles.item_data1}>
                       <div className={styles.item_image}>
                         <Image
-                          src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${tool.image1}`}
+                          src={
+                            tool.image1.startsWith("http")
+                              ? tool.image1
+                              : `/uploads/${tool.image1}`
+                          }
                           alt="item image"
                           width={250}
                           height={150}
                         />
+
                       </div>
                       <div className={styles.name_price}>
                         <div className={styles.item_name}><h1>{tool.title}</h1></div>

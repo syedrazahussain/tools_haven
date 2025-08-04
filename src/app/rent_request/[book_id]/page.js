@@ -155,7 +155,7 @@ export default function RentRequestPage(paramsPromise) {
           {item?.image1 && (
             <div className={styles.imageWrapper}>
               <img
-                src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image1}`}
+                src={item.image1}
                 alt="Item"
                 className={styles.thumbnail}
               />
@@ -205,7 +205,7 @@ export default function RentRequestPage(paramsPromise) {
               <h3>🧾 Payment Screenshot</h3>
               {booking.screenshot ? (
                 <img
-                  src={`${process.env.NEXT_PUBLIC_API_URL}/${booking.screenshot.replace('\\', '/')}`}
+                  src={booking.screenshot.replace('\\', '/')}
                   alt="Payment Screenshot"
                   className={styles.screenshot}
                 />

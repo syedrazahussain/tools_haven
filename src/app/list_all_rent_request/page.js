@@ -116,7 +116,7 @@ export default function ListAllRequest() {
                     {bookings.map((b, index) => {
                         const item = items[b.item_id];
                         const imageUrl = item?.image1
-                            ? `${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image1}`
+                            ? item.image1
                             : null;
 
                         return (

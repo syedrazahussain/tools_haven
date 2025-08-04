@@ -10,6 +10,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
 
+// Utility to validate image URLs
+function isValidHttpUrl(string) {
+  try {
+    const url = new URL(string);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch (_) {
+    return false;
+  }
+}
+
 export default function Managetools() {
   useRoleGuard(['toolsmaster']);
   const router = useRouter();
@@ -120,12 +130,16 @@ export default function Managetools() {
               <div className={styles.cards} key={key}>
                 <div className={styles.card_top_part_div}>
                   <div className={styles.image}>
-                    <Image
-                      src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${tool.image1 || 'default.jpg'}`}
-                      alt="item image"
-                      height={100}
-                      width={100}
-                    />
+                    {isValidHttpUrl(tool.image1) ? (
+                      <Image
+                        src={tool.image1}
+                        alt="item image"
+                        height={100}
+                        width={100}
+                      />
+                    ) : (
+                      <div className="text-sm text-gray-500">No Image</div>
+                    )}
                   </div>
 
                   <div className={styles.id_and_images_div}>
@@ -162,11 +176,11 @@ export default function Managetools() {
                   {visibleImages[tool.item_id] && (
                     <div className={styles.sides_images_div}>
                       {[tool.image1, tool.image2, tool.image3, tool.image4]
-                        .filter((img) => img)
+                        .filter((img) => isValidHttpUrl(img))
                         .map((img, idx) => (
                           <Image
                             key={idx}
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img}`}
+                            src={img}
                             height={100}
                             width={100}
                             alt={`side-img-${idx + 1}`}

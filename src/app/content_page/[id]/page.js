@@ -161,7 +161,7 @@ export default function Content_page() {
                     <div className={styles.item_image}>
                         {gettools.image1 && (
                             <Image
-                                src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${gettools.image1}`}
+                                src={gettools.image1}
                                 width={400}
                                 height={100}
                                 alt={gettools.title || 'Tool Image'}
@@ -215,7 +215,7 @@ export default function Content_page() {
                         img ? (
                             <div className={styles.sides} key={i}>
                                 <Image
-                                    src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img}`}
+                                    src={gettools.image1}
                                     width={160}
                                     height={0}
                                     alt={gettools.title || "Tool Image"}
@@ -265,7 +265,7 @@ export default function Content_page() {
                                 <div className={styles.similar_container} key={tool.item_id}>
                                     <div className={styles.item_similar_image}>
                                         <Image
-                                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${tool.image1}`}
+                                           src={tool.image1}
                                             width={80}
                                             height={70}
                                             alt={tool.title}
