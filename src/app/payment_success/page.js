@@ -12,7 +12,17 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 
-export default function PaymentSuccess() {
+const steps = [
+    { id: 1, className: 'step11', label: 'Date & Delivery', icon: <BsCalendarDate /> },
+
+    { id: 2, className: 'step2', label: 'Summary', icon: <LiaClipboardListSolid /> },
+    { id: 3, className: 'step3', label: 'Payment', icon: <LiaRupeeSignSolid /> },
+    { id: 4, className: 'step4', label: 'Add Screenshot', icon: <RiScreenshot2Line /> },
+    { id: 5, className: 'step5', label: 'Success', icon: <GiConfirmed /> },
+];
+
+
+export default function PaymentSuccess({ currentStep }) {
     useRoleGuard(['renter']);
     const router = useRouter();
     const [loading, setLoading] = useState(false);
@@ -28,33 +38,55 @@ export default function PaymentSuccess() {
     return (
         <div className={styles.container}>
             <ToastContainer position="top-right" autoClose={3000} />
-            <div className={styles.step_line_div}>
-                <div className={styles.step1_side_line}></div>
-                <div className={styles.step} id={styles.step1}>
-                    <i className={styles.icon}><BsCalendarDate /></i>
-                    <h1 className={styles.heading}>Date & Delivery</h1>
-                </div>
-                <div className={styles.step2_side_Line}></div>
-                <div className={styles.step} id={styles.step2}>
-                    <i className={styles.icon}><LiaClipboardListSolid /></i>
-                    <h1 id={styles.heading_summary}>Summary</h1>
-                </div>
-                <div className={styles.step3_side_Line}></div>
-                <div className={styles.step} id={styles.step3}>
-                    <i className={styles.icon}><LiaRupeeSignSolid /></i>
-                    <h1 id={styles.heading_payment}>Payment</h1>
-                </div>
-                <div className={styles.step4_side_Line}></div>
-                <div className={styles.step} id={styles.step4}>
-                    <i className={styles.icon}><RiScreenshot2Line /></i>
-                    <h1 id={styles.heading_screenshot}>Add Screenshot</h1>
-                </div>
-                <div className={styles.step5_side_Line}></div>
-                <div className={styles.step} id={styles.step5}>
-                    <i className={styles.icon}><GiConfirmed /></i>
-                    <h1 id={styles.heading_success}>Success</h1>
-                </div>
-                <div className={styles.step6_side_Line}></div>
+            <div className={styles.stepTracker}>
+                {steps.map((step, index) => {
+                    const isCompleted = currentStep > step.id;
+                    const isCurrent = currentStep === step.id;
+                    const isUpcoming = currentStep < step.id;
+
+                    const showLeftLine = index !== 0;
+                    const showRightLine = index !== steps.length - 1;
+
+                    return (
+                        <div className={styles.stepItem} key={step.id}>
+                            {/* Left Line */}
+                            {showLeftLine && (
+                                <div
+                                    className={`${styles.stepLine} ${styles.leftLine} ${isCompleted ? styles.lineActive : styles.lineInactive
+                                        }`}
+                                />
+                            )}
+
+                            {/* Step Circle */}
+                            <div
+                                className={`${styles.stepCircle} ${styles[step.className]} ${isCompleted
+                                    ? styles.completed
+                                    : isCurrent
+                                        ? styles.current
+                                        : styles.upcoming}`}
+                            >
+                                <span className={styles.icon}>{step.icon}</span>
+                            </div>
+
+
+                            {/* Step Label */}
+                            <div
+                                className={`${styles.stepLabel} ${step.className ? styles[step.className] : ''} ${currentStep >= step.id ? styles.labelActive : styles.labelInactive}`}
+                            >
+                                {step.label}
+                            </div>
+
+
+                            {showRightLine && (
+                                <div
+                                    className={`${styles.stepLine} ${styles.rightLine} ${isCompleted || isCurrent ? styles.lineActive : styles.lineInactive
+                                        }`}
+                                />
+                            )}
+
+                        </div>
+                    );
+                })}
             </div>
 
             <div className={styles.card}>

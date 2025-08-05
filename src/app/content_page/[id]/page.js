@@ -18,7 +18,17 @@ import "react-date-range/dist/theme/default.css";
 
 import useRoleGuard from '../../../../hooks/useRoleGuard';
 
-export default function Content_page() {
+
+const steps = [
+    { id: 1, className: 'step11', label: 'Date & Delivery', icon: <BsCalendarDate /> },
+
+    { id: 2, label: 'Summary', icon: <LiaClipboardListSolid /> },
+    { id: 3, label: 'Payment', icon: <LiaRupeeSignSolid /> },
+    // { id: 4, label: 'Add Screenshot', icon: <RiScreenshot2Line /> },
+    { id: 5, label: 'Success', icon: <GiConfirmed /> },
+];
+
+export default function Content_page({ currentStep }) {
     useRoleGuard(['renter']);
     const router = useRouter();
     const { id } = useParams();
@@ -114,47 +124,65 @@ export default function Content_page() {
         (tool) => tool.category === gettools.category && tool.item_id !== gettools.item_id
     ).slice(0, 4);
 
+
+
     return (
         <div>
             <Header />
             <div className={styles.main_content_container}>
-                {/* Step Line */}
-                <div className={styles.step_line_div}>
-                    <div className={styles.step1_side_line}></div>
-                    <div className={styles.step} id={styles.step1}>
-                        <i className={styles.icon}><BsCalendarDate /></i>
-                        <h1 className={styles.heading}>Date & Delivery</h1>
+                <div className={styles.stepTracker}>
+                    {steps.map((step, index) => {
+                        const isCompleted = currentStep > step.id;
+                        const isCurrent = currentStep === step.id;
+                        const isUpcoming = currentStep < step.id;
 
-                    </div>
-                    <div className={styles.step2_side_Line}></div>
-                    <div className={styles.step} id={styles.step2}>
-                        <i className={styles.icon}><LiaClipboardListSolid /></i>
-                        <h1 id={styles.heading_summary}>Summary</h1>
+                        const showLeftLine = index !== 0;
+                        const showRightLine = index !== steps.length - 1;
 
-                    </div>
-                    <div className={styles.step3_side_Line}></div>
-                    <div className={styles.step} id={styles.step3}>
-                        <i className={styles.icon}><LiaRupeeSignSolid /></i>
-                        <h1 id={styles.heading_payment}>Payment</h1>
+                        return (
+                            <div className={styles.stepItem} key={step.id}>
+                                {/* Left Line */}
+                                {showLeftLine && (
+                                    <div
+                                        className={`${styles.stepLine} ${styles.leftLine} ${isCompleted ? styles.lineActive : styles.lineInactive
+                                            }`}
+                                    />
+                                )}
 
-                    </div>
-                    {/* <div className={styles.step4_side_Line}></div>
-                    <div className={styles.step} id={styles.step4}>
-                        <i className={styles.icon}><RiScreenshot2Line /></i>
-                        <h1 id={styles.heading_screenshot}>Add Screenshot</h1>
+                                {/* Step Circle */}
+                                <div
+                                    className={`${styles.stepCircle} ${styles[step.className]} ${isCompleted
+                                        ? styles.completed
+                                        : isCurrent
+                                            ? styles.current
+                                            : styles.upcoming}`}
+                                >
+                                    <span className={styles.icon}>{step.icon}</span>
+                                </div>
 
-                    </div> */}
+
+                                {/* Step Label */}
+                                <div
+                                    className={`${styles.stepLabel} ${step.className ? styles[step.className] : ''} ${currentStep >= step.id ? styles.labelActive : styles.labelInactive}`}
+                                >
+                                    {step.label}
+                                </div>
 
 
-                    <div className={styles.step5_side_Line}></div>
-                    <div className={styles.step} id={styles.step5}>
-                        <i className={styles.icon}><GiConfirmed /></i>
-                        <h1 id={styles.heading_success}>Success</h1>
+                                {showRightLine && (
+                                    <div
+                                        className={`${styles.stepLine} ${styles.rightLine} ${isCompleted || isCurrent ? styles.lineActive : styles.lineInactive
+                                            }`}
+                                    />
+                                )}
 
-                    </div>
-                    <div className={styles.step6_side_Line}></div>
-
+                            </div>
+                        );
+                    })}
                 </div>
+
+
+
 
                 {/* Left */}
                 <div className={styles.left_container}>

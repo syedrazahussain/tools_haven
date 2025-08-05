@@ -87,231 +87,7 @@
     
     
 }
-.step_line_div {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-
-}
-
-.step1_side_line {
-    background-color: green;
-    height: 2px;
-    width: 150px;
-    margin-top: -30px;
-    position: relative;
-    left: 35;
-}
-
-.step2_side_Line {
-    background-color: green;
-    height: 2px;
-    width: 150px;
-    margin-top: -30px;
-    position: relative;
-    left: -34;
-
-
-}
-
-#step2 {
-    margin-left: -48px;
-}
-
-#step2 i {
-    border-radius: 50%;
-    border: 2px solid;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    color: white;
-
-}
-
-#heading_summary {
-    color: green;
-    font-weight: bold;
-
-}
-
-.step3_side_Line {
-    background-color: #dadada;
-    height: 2px;
-    width: 160px;
-    margin-top: -30px;
-    position: relative;
-    left: -13;
-}
-
-#step3 {
-    margin-left: -24px;
-}
-
-#step3 i {
-    border-radius: 50%;
-    border: 2px solid;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #dadada;
-    color: white;
-
-
-}
-
-#heading_payment {
-    color: #dadada;
-    font-weight: bold;
-
-}
-
-.step4_side_Line {
-    background-color: #dadada;
-    height: 2px;
-    width: 160px;
-    margin-top: -30px;
-    position: relative;
-    left: -10;
-}
-
-#step4 {
-    margin-left: -48px;
-}
-
-#step4 i {
-    border-radius: 50%;
-    border: 2px solid;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #dadada;
-    color: white;
-
-
-}
-
-.step5_side_Line {
-    background-color: #dadada;
-    height: 2px;
-    width: 160px;
-    margin-top: -30px;
-    position: relative;
-    left: -38;
-    
-    
-}
-
-#heading_screenshot {
-    color: #dadada;
-    font-weight: bold;
-}
-
-.step {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.step i {
-    border-radius: 50%;
-    border: 2px solid;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.icon {
-    font-weight: bold;
-
-    font-size: 28px;
-}
-
-.step_side_Line {
-    background-color: #dadada;
-    height: 2px;
-    width: 150px;
-    margin-top: -30px;
-
-}
-
-#step1 i {
-    border-radius: 50%;
-    border: 2px solid;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    color: white;
-
-}
-
-.heading {
-    color: green;
-    font-weight: bold;
-}
-.step5_side_Line {
-    background-color: #dadada;
-    height: 2px;
-    width: 160px;
-    margin-top: -30px;
-    position: relative;
-    left: -28;
-
-
-}
-
-#step5 {
-    margin-left: -47px;
-}
-
-#step5 i {
-    border-radius: 50%;
-    border: 2px solid;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #dadada;
-    color: white;
-
-
-}
-
-#heading_success {
-    color: #dadada;
-    font-weight: bold;
-}
-.step6_side_Line{
-     background-color: #dadada;
-    height: 2px;
-    width: 160px;
-    margin-top: -30px;
-    position: relative;
-    left: -18;
-
-}
 
 .loading_container {
   display: flex;
@@ -373,241 +149,160 @@
         padding: 12px;
     }
 
-    .step_line_div {
 
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin-bottom: 40px;
-        
-        width: 100%;
-
-
-    }
-
-    .step1_side_line {
-        background-color: green;
-        height: 2px;
-        width: 90px;
-        margin-top: -30px;
-        position: relative;
-        left: 2;
-    }
-
-    .step2_side_Line {
-        background-color: green;
-        height: 2px;
-        width: 170px;
-        margin-top: -30px;
-        position: relative;
-        left: -2px;
-
-
-    }
-
-    #step2 {
-        margin-left: -4px;
-        margin-top: -15px;
-    }
-
-    #step2 i {
-        border-radius: 50%;
-        border: 2px solid;
-        padding: 10px;
-        height: 45px;
-        width: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: green;
-        color: white;
-        font-size: 20px;
-
-    }
-
-    #heading_summary {
-        color: green;
-        font-weight: bold;
-        font-size: 0.6rem !important;
-
-    }
-
-    .step3_side_Line {
-        background-color: #dadada;
-        height: 2px;
-        width: 170px;
-        margin-top: -30px;
-        position: relative;
-        left: -3;
-    }
-
-    #step3 {
-        margin-left: -5px;
-        margin-top: -15px;
-    }
-
-    #step3 i {
-        border-radius: 50%;
-        border: 2px solid;
-        padding: 10px;
-        height: 45px;
-        width: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #dadada;
-        color: white;
-        font-size: 20px;
-
-
-    }
-
-    #heading_payment {
-        color: #dadada;
-        font-weight: bold;
-        font-size: 0.6rem !important;
-
-    }
-
-    .step4_side_Line {
-        background-color: #dadada;
-        height: 2px;
-        width: 160px;
-        margin-top: -30px;
-        position: relative;
-        left: -2;
-    }
-
-    #step4 {
-        margin-left: -8px;
-    }
-
-    #step4 i {
-        border-radius: 50%;
-        border: 2px solid;
-        padding: 10px;
-        height: 45px;
-        width: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #dadada;
-        color: white;
-        font-size: 20px;
-
-
-    }
-
-    .step5_side_Line {
-        background-color: #dadada;
-        height: 2px;
-        width: 170px;
-        margin-top: -30px;
-        position: relative;
-        left: -6;
-
-
-    }
-
-    #step5 {
-        margin-left: -8px;
-        margin-top: -15px;
-
-    }
-
-    #step5 i {
-        border-radius: 50%;
-        border: 2px solid;
-        padding: 10px;
-        height: 45px;
-        width: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #dadada;
-        color: white;
-        font-size: 20px;
-
-
-    }
-
-    #heading_success {
-        color: #dadada;
-        font-weight: bold;
-        font-size: 0.6rem !important;
-    }
-
-    #heading_screenshot {
-        color: #dadada;
-        font-weight: bold;
-        font-size: 0.6rem !important;
-        text-align: center;
-    }
-
-    .step6_side_Line {
-        background-color: #dadada;
-        height: 2px;
-        width: 160px;
-        margin-top: -30px;
-        position: relative;
-        left: -8;
-    }
-
-    .step {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .step i {
-        border-radius: 50%;
-        border: 2px solid;
-        padding: 10px;
-        height: 50px;
-        width: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .icon {
-        font-weight: bold;
-
-        font-size: 20px;
-    }
-
-    .step_side_Line {
-        background-color: #dadada;
-        height: 2px;
-        width: 150px;
-        margin-top: -30px;
-
-    }
-
-    #step1 i {
-        border-radius: 50%;
-        border: 2px solid;
-        padding: 10px;
-        height: 45px;
-        width: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: green;
-        color: white;
-
-    }
-
-    .heading {
-        color: green;
-        font-weight: bold;
-        font-size: 0.6rem !important;
-        text-align: center;
-    }
 
     
 }
+
+
+
+.stepTracker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  position: relative;
+  width: 100%;
+}
+
+.stepItem {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 20px;
+  color: white;
+}
+
+.stepLabel {
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+   color: #ccc;
+  font-weight: bold;
+}
+
+.stepLine {
+  position: absolute;
+  top: 20px;
+  height: 3px;
+  background-color: #ccc;
+  z-index: 1;
+}
+
+.leftLine {
+  left: 0;
+  width: 50%;
+}
+
+.rightLine {
+  right: 0;
+  width: 50%;
+}
+
+.completed {
+  background-color: #4caf50;
+}
+
+.current {
+  background-color: #4caf50;
+}
+
+.upcoming {
+  background-color: #ccc;
+}
+
+.lineActive {
+  background-color: #4caf50;
+}
+
+.lineInactive {
+  background-color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .stepTracker {
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+  }
+
+  .stepItem {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .stepCircle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .stepLabel {
+    margin-top: 0;
+    margin-left: 8px;
+  }
+
+  .stepLine{
+    margin-top: -5px;
+  }
+}
+
+
+
+
+.step11 {
+  color: green;
+  font-weight: 600;
+}
+
+.stepCircle.step11 {
+  background-color: green;
+  color: white; /* optional: makes the icon inside white for contrast */
+}
+/* Green right line after Step 1 */
+.stepItem:nth-child(1) .rightLine {
+  background-color: green;
+  
+}
+
+
+/* Step 2 label green */
+.step2 {
+  color: green;
+  font-weight: 600;
+}
+
+/* Step 2 circle green background */
+.stepCircle.step2 {
+  background-color: green;
+  color: white;
+}
+
+/* Optional: if you want left line before step 2 to also be green */
+.stepItem:nth-child(2) .leftLine {
+  background-color: green;
+}
+
+
+
+
+
 
 
